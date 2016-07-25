@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A80141E91D4142D2003337A9 /* AppDelegate.swift */,
+				A82E8B391D46144900EFBF06 /* Helpers */,
 				A80142011D415967003337A9 /* Views */,
 				A80142001D41595B003337A9 /* Datasorce */,
 				A80141FF1D415953003337A9 /* Model */,
@@ -114,8 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				A80142091D415FC7003337A9 /* index.json */,
-				A801420B1D41600B003337A9 /* Parser.swift */,
-				A8483F711D42984F00251457 /* ImageLoader.swift */,
 				A80141FB1D41567A003337A9 /* ColletionViewDataSource.swift */,
 			);
 			name = Datasorce;
@@ -128,6 +127,15 @@
 				A8483F691D42433F00251457 /* VerbCollectionViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		A82E8B391D46144900EFBF06 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A801420B1D41600B003337A9 /* Parser.swift */,
+				A8483F711D42984F00251457 /* ImageLoader.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

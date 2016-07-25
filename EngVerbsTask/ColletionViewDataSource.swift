@@ -137,7 +137,6 @@ class ColletionViewDataSource:NSObject, UICollectionViewDelegate, UICollectionVi
     
     //MARK search bar
     func filteConten(searchedName: String) {
-          print(searchedName)
         self.searchedVerbs = self.arrayOfVerbs.filter({ (text:Verb ) -> Bool in
             return text.verb!.containsString(searchedName)
         })
