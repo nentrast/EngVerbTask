@@ -1,0 +1,6 @@
+framework module Pods_EngVerbsTask {
+  umbrella header "Pods-EngVerbsTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

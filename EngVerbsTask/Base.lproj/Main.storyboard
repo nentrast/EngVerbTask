@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EngVerbsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="04v-zo-Oj4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XVz-AZ-Gb8">
+                                    <size key="itemSize" width="114" height="132"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellVerb" id="sdA-lV-MPk" customClass="VerbCollectionViewCell" customModule="EngVerbsTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="114" height="132"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joke" translatesAutoresizingMaskIntoConstraints="NO" id="gTj-j1-UQf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="114" height="132"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gTj-j1-UQf" firstAttribute="top" secondItem="sdA-lV-MPk" secondAttribute="top" id="NG3-HV-Rp3"/>
+                                            <constraint firstAttribute="trailing" secondItem="gTj-j1-UQf" secondAttribute="trailing" id="cUQ-9L-UqN"/>
+                                            <constraint firstItem="gTj-j1-UQf" firstAttribute="leading" secondItem="sdA-lV-MPk" secondAttribute="leading" id="crf-mI-7RZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="gTj-j1-UQf" secondAttribute="bottom" id="vw0-bT-QVh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageVerb" destination="gTj-j1-UQf" id="BEw-wn-zyL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b04-BD-AgA">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b04-BD-AgA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5i7-XE-hnM"/>
+                            <constraint firstAttribute="trailing" secondItem="b04-BD-AgA" secondAttribute="trailing" id="9xE-NX-7bH"/>
+                            <constraint firstItem="04v-zo-Oj4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AIX-0Y-Hwf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="04v-zo-Oj4" secondAttribute="bottom" id="CfB-0H-8jX"/>
+                            <constraint firstAttribute="trailing" secondItem="04v-zo-Oj4" secondAttribute="trailing" id="GpE-y6-5tO"/>
+                            <constraint firstItem="b04-BD-AgA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uiu-jX-dia"/>
+                            <constraint firstItem="04v-zo-Oj4" firstAttribute="top" secondItem="b04-BD-AgA" secondAttribute="bottom" id="z15-5B-aXb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="04v-zo-Oj4" id="opU-zi-57h"/>
+                        <outlet property="searchBar" destination="b04-BD-AgA" id="viW-rw-1Pi"/>
+                        <outlet property="searchDisplayController" destination="R9x-Lj-j8D" id="Lm8-0t-X64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="R9x-Lj-j8D">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="O7z-cw-OGo"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="0Ka-ry-Imy"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="vXk-n6-K6F"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="Wnb-OC-Ycx"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1298" y="477"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Joke" width="460" height="361"/>
+    </resources>
+</document>
