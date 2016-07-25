@@ -9,6 +9,8 @@
 import UIKit
 
 class Parser: NSObject {
+    
+//MARK: fill model from JSON file 
     class func fillModell() -> [Verb] {
         var array = [Verb]()
         let path = NSBundle.mainBundle().pathForResource("index", ofType: "json")

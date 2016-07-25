@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController{
 
-    
+//MARK outlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+//MARK vars
     let arr = Parser.fillModell()
     var datasource:ColletionViewDataSource?    
 
-    
+//MARl lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.datasource = ColletionViewDataSource(withColectionView: self.collectionView, searchBar: self.searchBar)

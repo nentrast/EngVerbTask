@@ -116,7 +116,6 @@
 				A80142091D415FC7003337A9 /* index.json */,
 				A801420B1D41600B003337A9 /* Parser.swift */,
 				A8483F711D42984F00251457 /* ImageLoader.swift */,
-				A8483F691D42433F00251457 /* VerbCollectionViewCell.swift */,
 				A80141FB1D41567A003337A9 /* ColletionViewDataSource.swift */,
 			);
 			name = Datasorce;
@@ -126,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A8483F6D1D427D2A00251457 /* ViewController.swift */,
+				A8483F691D42433F00251457 /* VerbCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";

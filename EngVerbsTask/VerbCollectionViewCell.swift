@@ -13,13 +13,14 @@ class VerbCollectionViewCell: UICollectionViewCell {
     enum CellColor:String {
         case Black = "000000", Blue = "0075f2"
     }
-    
+
+//MARK: vars
     @IBOutlet weak var imageVerb: UIImageView!
     var verb: Verb?
     private var width:Int = 0
     private  var height:Int = 0
     private var timer:NSTimer!
-    
+//MARK: fiil model with data
     func fillWithParams(verb: Verb)  {
         self.verb = verb
         self.width = Int(self.bounds.size.height)
@@ -27,12 +28,12 @@ class VerbCollectionViewCell: UICollectionViewCell {
         self.showVerb()
     }
     
+//MARK: show word image 
     func showVerb() {
         self.showImageWithParams(.Black, words: [(self.verb?.verb)!])
         self.showWithAnimation()
     }
-    
-    
+
     func showParticiples() {
         self.showImageWithParams(.Blue, words: (self.verb?.participles)!)
         self.showWithAnimation()

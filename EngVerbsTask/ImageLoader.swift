@@ -9,6 +9,7 @@
 import UIKit
 
 class ImageLoader: NSObject {
+    //MARK: image downloader 
     class  func downloadThumbImage(url: String, imageView: UIImageView) {
         let url = NSURL(string: url)!
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (responseData, responseUrl, error) -> Void in
