@@ -152,6 +152,7 @@ class ColletionViewDataSource:NSObject, UICollectionViewDelegate, UICollectionVi
         }
         else {
             self.activeSearchBar = false
+            searchBar.resignFirstResponder()
             self.collectionView?.reloadData()
         }
     }
