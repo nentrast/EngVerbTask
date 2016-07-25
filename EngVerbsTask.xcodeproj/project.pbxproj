@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7AFB6DB300C792AC885085DA /* Pods_EngVerbsTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6B4DBC7BE399D299DEC37 /* Pods_EngVerbsTask.framework */; };
+		70DAF59BBC41CCE2AA27B6F4 /* Pods_EngVerbsTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283CE1DBA806F21C31FB8AB /* Pods_EngVerbsTask.framework */; };
 		A80141EA1D4142D2003337A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80141E91D4142D2003337A9 /* AppDelegate.swift */; };
 		A80141EF1D4142D2003337A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80141ED1D4142D2003337A9 /* Main.storyboard */; };
 		A80141F11D4142D2003337A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80141F01D4142D2003337A9 /* Assets.xcassets */; };
@@ -22,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3ACD8366BDDD2A2D4046A4B6 /* Pods-EngVerbsTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngVerbsTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EngVerbsTask/Pods-EngVerbsTask.debug.xcconfig"; sourceTree = "<group>"; };
-		3E36971E8BAED1EDCEB1A990 /* Pods-EngVerbsTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngVerbsTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-EngVerbsTask/Pods-EngVerbsTask.release.xcconfig"; sourceTree = "<group>"; };
+		2283CE1DBA806F21C31FB8AB /* Pods_EngVerbsTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngVerbsTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5C7C0F8086DFD26681E205 /* Pods-EngVerbsTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngVerbsTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EngVerbsTask/Pods-EngVerbsTask.debug.xcconfig"; sourceTree = "<group>"; };
+		9AAE517B333CA485EE8A2E19 /* Pods-EngVerbsTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngVerbsTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-EngVerbsTask/Pods-EngVerbsTask.release.xcconfig"; sourceTree = "<group>"; };
 		A80141E61D4142D2003337A9 /* EngVerbsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngVerbsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80141E91D4142D2003337A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80141EE1D4142D2003337A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		A8483F691D42433F00251457 /* VerbCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8483F6D1D427D2A00251457 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8483F711D42984F00251457 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		BEE6B4DBC7BE399D299DEC37 /* Pods_EngVerbsTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngVerbsTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,26 +45,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AFB6DB300C792AC885085DA /* Pods_EngVerbsTask.framework in Frameworks */,
+				70DAF59BBC41CCE2AA27B6F4 /* Pods_EngVerbsTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E955D4F64FEF426CE2CFF33 /* Pods */ = {
+		237B65845D219BEDAA51F50C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3ACD8366BDDD2A2D4046A4B6 /* Pods-EngVerbsTask.debug.xcconfig */,
-				3E36971E8BAED1EDCEB1A990 /* Pods-EngVerbsTask.release.xcconfig */,
+				6C5C7C0F8086DFD26681E205 /* Pods-EngVerbsTask.debug.xcconfig */,
+				9AAE517B333CA485EE8A2E19 /* Pods-EngVerbsTask.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8F85799B08858A88AA478F90 /* Frameworks */ = {
+		4AD10B9753B9258CD4A16026 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BEE6B4DBC7BE399D299DEC37 /* Pods_EngVerbsTask.framework */,
+				2283CE1DBA806F21C31FB8AB /* Pods_EngVerbsTask.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,8 +74,8 @@
 			children = (
 				A80141E81D4142D2003337A9 /* EngVerbsTask */,
 				A80141E71D4142D2003337A9 /* Products */,
-				8E955D4F64FEF426CE2CFF33 /* Pods */,
-				8F85799B08858A88AA478F90 /* Frameworks */,
+				237B65845D219BEDAA51F50C /* Pods */,
+				4AD10B9753B9258CD4A16026 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -373,7 +373,7 @@
 		};
 		A80141F91D4142D2003337A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ACD8366BDDD2A2D4046A4B6 /* Pods-EngVerbsTask.debug.xcconfig */;
+			baseConfigurationReference = 6C5C7C0F8086DFD26681E205 /* Pods-EngVerbsTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EngVerbsTask/Info.plist;
@@ -385,7 +385,7 @@
 		};
 		A80141FA1D4142D2003337A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E36971E8BAED1EDCEB1A990 /* Pods-EngVerbsTask.release.xcconfig */;
+			baseConfigurationReference = 9AAE517B333CA485EE8A2E19 /* Pods-EngVerbsTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EngVerbsTask/Info.plist;
