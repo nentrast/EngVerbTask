@@ -10,12 +10,13 @@ import UIKit
 
 class ColletionViewDataSource:NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
-    var collectionView:UICollectionView?
-    var searchBar:UISearchBar?
+    var collectionView:UICollectionView!
+    var searchBar:UISearchBar!
     let cellID = "cellVerb"
     let device = UIDevice.currentDevice().model
     
-    var gestureDelete = UILongPressGestureRecognizer()
+    var gestureDelete = UITapGestureRecognizer()
+    var gestureMove = UILongPressGestureRecognizer()
     var activeSearchBar = false
     
     var arrayOfVerbs = Parser.fillModell()
@@ -31,19 +32,25 @@ class ColletionViewDataSource:NSObject, UICollectionViewDelegate, UICollectionVi
         self.searchBar = searchBar
         self.searchBar?.delegate = self
         self.initDeleteGesture()
+        self.initMovegesture()
 
     }
     
     //MARL: long press gesture
     func initDeleteGesture() {
-        self.gestureDelete = UILongPressGestureRecognizer(target: self, action: #selector(handleLongpressDelete))
-        self.gestureDelete.minimumPressDuration = 1
+        self.gestureDelete = UITapGestureRecognizer(target: self, action: #selector(self.handleLongpressDelete(_:)))
+        self.gestureDelete.numberOfTapsRequired = 2
         self.collectionView?.addGestureRecognizer(gestureDelete)
+    }
+    
+    func initMovegesture() {
+        self.gestureMove = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture))
+        self.collectionView.addGestureRecognizer(self.gestureMove)
     }
     
 
     
-    func handleLongpressDelete(gesture: UILongPressGestureRecognizer) {
+    func handleLongpressDelete(gesture: UITapGestureRecognizer) {
         if gesture.state != UIGestureRecognizerState.Ended  {
             return
         }
@@ -57,6 +64,26 @@ class ColletionViewDataSource:NSObject, UICollectionViewDelegate, UICollectionVi
                 }, completion: nil)
         }
     }
+    
+    func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        
+        switch(gesture.state) {
+            
+        case UIGestureRecognizerState.Began:
+            guard let selectedIndexPath = self.collectionView!.indexPathForItemAtPoint(gesture.locationInView(self.collectionView)) else {
+                break
+            }
+            self.collectionView.beginInteractiveMovementForItemAtIndexPath(selectedIndexPath)
+        case UIGestureRecognizerState.Changed:
+            self.collectionView!.updateInteractiveMovementTargetPosition(gesture.locationInView(gesture.view!))
+        case UIGestureRecognizerState.Ended:
+            self.collectionView!.endInteractiveMovement()
+        default:
+            self.collectionView!.cancelInteractiveMovement()
+        }
+    }
+    
+    
     
     //MARK: Collection view data source
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
